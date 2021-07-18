@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Tourney:wght@200&display=swap");
+.card_front {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+}
+.card_front h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.card_front h1 {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 1px 2px black;
+}
+.card_front h1:hover::before {
+  transform: scaleX(1);
+}
+
+.front_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(71, 71, 71, 0.4);
+  border-radius: 50px;
+}
+
+.card_container {
+  width: 400px;
+  height: 550px;
+  display: flex;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  border-radius: 52px;
+}
+
+.back_details > * {
+  cursor: pointer;
+}
+
+.card_container.is_flipped .card {
+  transform: rotateY(-180deg);
+}
+
+.card_front,
+.card_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50px;
+}
+
+.card_back {
+  transform: rotateY(-180deg);
+  background-color: rgb(39, 39, 39);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 1px 2px black;
+}
+.back_bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgb(39, 39, 39, 0.7);
+  justify-content: center;
+  border-radius: 50px;
+}
+.back_container {
+  width: 90%;
+  height: 80%;
+  margin: 0 5% 0 5%;
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 50px;
+}
+
+.back_container h2 {
+  font-size: 45px;
+  text-align: center;
+  margin: 5px 0 5px 0;
+}
+.back_details > * {
+  margin: 10px 0 10px 0;
+  font-size: 22px;
+}
+
+.numb {
+  font-family: "Tourney", cursive;
+  font-size: 50px;
+}
+.fa {
+  width: 20px;
+}
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+  width: 90%;
+  padding: 20px 0 20px 0;
+  border-top: 3px solid white;
+}
+
+@media screen and (max-width: 600px) {
+  .card_container {
+    width: 80vw;
+    height: 60vh;
+  }
+}

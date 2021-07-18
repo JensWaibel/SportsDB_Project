@@ -1,0 +1,42 @@
+.PlayerSearch {
+  background-blend-mode: multiply;
+  min-height: 100vh;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  margin: 40px auto 40px auto;
+}
+.search-bar {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  height: 25px;
+}
+.search-button {
+  background: rgb(69, 162, 158);
+  padding: 15px 25px;
+  border: none;
+  color: white;
+}
+.search-button:hover {
+  background-color: rgb(69, 162, 158, 0.8);
+   box-sizing: border-box;
+  border: 2px solid black;
+}
+.player {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+}
+.player > * {
+  flex: 1 1 1;
+  margin: 30px;
+}

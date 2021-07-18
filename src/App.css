@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --facebookcol: rgb(59, 89, 152);
+  --twittercol: rgb(85, 172, 238);
+  --instacol: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  --bg-color: #1f2833;
+  --nav-color: #45a29e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  background: var(--bg-color);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 10vh;
+  background: var(--nav-color);
+}
+.nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.navStyle {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+}
+.navStyle:hover {
+  color: rgb(255, 255, 255, 0.8);
+  text-shadow: 1px 1px black;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+.search-bar {
+  width: 50%;
+  border: none;
+  padding: 10px;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 20%;
+}
+.fa-facebook {
+  background: var(--facebookcol);
+  color: white;
+}
+.fa-twitter {
+  background: var(--twittercol);
+  color: white;
+}
+.fa-instagram {
+  background: var(--instacol);
+  color: white;
+}
+.fa-facebook:hover {
+  background: rgb(59, 89, 152, 0.95);
+  border: 2px solid black;
+  padding: 8px;
+}
+.fa-twitter:hover {
+  background: rgb(82, 166, 231, 0.95);
+  border: 2px solid black;
+  padding: 8px;
+}
+.fa-instagram:hover {
+  background: var(instacol);
+  border: 2px solid black;
+  padding: 8px;
+}
